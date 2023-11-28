@@ -1,0 +1,22 @@
+.box {
+    display: inline-block;
+    width: auto;
+    background-color: navy;
+    padding: 10px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.input {
+    width: 90%;
+}
+.submit {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+label {
+    color: white;
+}
