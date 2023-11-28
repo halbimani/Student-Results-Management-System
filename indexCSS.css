@@ -1,0 +1,23 @@
+.box {
+    display: inline-block;
+    width: auto;
+    background-color: navy;
+    padding: 10px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.li {
+    color: white;
+    list-style-type: none;
+    margin-left: 0px;
+    border-left: 0px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
