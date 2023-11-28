@@ -1,0 +1,33 @@
+td {
+    border: 1px solid black; 
+    padding: 10px; 
+    margin: 5px; 
+    text-align: center; 
+    color: white;
+}
+.box {
+    display: inline-block;
+    width: auto;
+    background-color: navy;
+    padding: 10px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+th {
+    border: 1px solid black; 
+    padding: 10px; 
+    margin: 5px; 
+    text-align: center; 
+    color: white;
+    font-weight: bold;
+}
+.link {
+    border: 1px solid black; 
+    padding: 10px; 
+    margin: 5px; 
+    text-align: center; 
+    color: white;
+}
