@@ -1,16 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "student_grades";
-
-$conn = new mysqli($servername, $username, $password, $database);
-
-if($conn -> connect_errno)
-{
-    echo "Connection failed: " . $conn -> connect_error;
-    exit();
-}
+include 'server_config.php';
 
 if (isset($_GET['studentid']) && !empty($_GET['studentid'])) {
     $studentid = $_GET['studentid'];
