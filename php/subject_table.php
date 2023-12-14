@@ -1,16 +1,5 @@
 <?php 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "student_grades";
-
-$conn = new mysqli($servername, $username, $password, $database);
-
-if ($conn -> connect_errno)
-{
-    echo "Connection failed: " . $conn -> connect_error;
-    exit();
-}
+include 'server_config.php';
 
 if (isset($_GET['subjectid']) && !empty($_GET['subjectid'])) {
     $subjectid = $_GET['subjectid'];
@@ -33,11 +22,11 @@ if ($result->num_rows > 0)
 <html>
     <head>
         <title>Subjects</title>
-        <link rel="stylesheet" href="table_designCSS.css">
+        <link rel="stylesheet" href="table_designCSSs.css">
     </head>
-    <body style="background-color: gray;">
-        <div class="box">
-        <h2 style="color: white;">Subjects Table</h2>
+    <body>
+        <div style="max-width: 600px;" class="container">
+        <h2>Subjects Table</h2>
             <table>
                 <thead>
                     <tr>
