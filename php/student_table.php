@@ -24,9 +24,9 @@ if ($result->num_rows > 0)
         <title>Students</title>
         <link rel="stylesheet" href="table_designCSS.css">
     </head>
-    <body style="background-color: gray;">
-        <div class="box">
-            <h2 style="color: white;">Students Table</h2>
+    <body>
+        <div class="container">
+            <h2>Students Table</h2>
             <table>
                 <thead>
                     <tr>
