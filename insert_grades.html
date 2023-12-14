@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Insert Grade</title>
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Insert Grade</h2>
+            <form action="insert_grade_conn.php" method="post">
+                <div class="form-group">
+                    <label for="studentid">Student ID</label> <br>
+                    <input type="text" name="studentid" id="studentid" required> <br>
+                </div>
+                <div class="form-group">
+                    <label for="subjectid">Subject ID</label> <br>
+                    <input type="text" name="subjectid" id="subjectid" required> <br>
+                </div>
+                <div>
+                    <label for="mark">Earned Mark</label> <br>
+                    <input type="text" name="mark" id="mark" required> <br> <br>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
