@@ -24,10 +24,10 @@ if (isset($_GET['studentid']) && !empty($_GET['studentid'])) {
         <link rel="stylesheet" href="table_designCSS.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
     </head>
-    <body style="background-color: gray;">
-        <div id="content" class="box">
+    <body>
+        <div style="max-width: 800px;" class="container" id="content">
             <?php $title = $once->fetch_assoc() ?>
-            <h2 style="color: white;"><?php echo $title['firstname'] . ' ' . $title['lastname'] ?>'s Grades</h2>
+            <h2 ><?php echo $title['firstname'] . ' ' . $title['lastname'] ?>'s Grades</h2>
             <table>
                 <thead>
                     <tr>
@@ -42,7 +42,6 @@ if (isset($_GET['studentid']) && !empty($_GET['studentid'])) {
                 <?php
 	                while ($row = $result->fetch_assoc()) {
                 ?>
-	
 	                <tr>
                         <td><?php echo $row['studentid'] ?></td>
                         <td><?php echo $row['firstname'] ?></td>
@@ -55,22 +54,22 @@ if (isset($_GET['studentid']) && !empty($_GET['studentid'])) {
                     }
                 ?>
                 </tbody>
-                </table>
-                <br>
-                <button onclick="generatePDF()">Generate PDF</button>
-            </div>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
-            <script>
-                function generatePDF() {
-                    const doc = new jsPDF();
-                    const content = document.getElementById('content');
-                    html2canvas(content, { scale: 2 }).then(canvas => {
-                        const imgData = canvas.toDataURL('image/png');
-                        doc.addImage(imgData, 'PNG', 10, 10, 180, 0);
-                        doc.save('student_grade.pdf');
-                    });
-                }
-            </script>
+            </table>
+            <br>
+            <button class="print" onclick="generatePDF()" data-html2canvas-ignore="true">Generate PDF</button>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+        <script>
+            function generatePDF() {
+                const doc = new jsPDF();
+                const content = document.getElementById('content');
+                html2canvas(content, { scale: 2 }).then(canvas => {
+                    const imgData = canvas.toDataURL('image/png');
+                    doc.addImage(imgData, 'PNG', 10, 10, 180, 0);
+                    doc.save('student_grade.pdf');
+                });
+            }
+        </script>
     </body>
 </html>
 
