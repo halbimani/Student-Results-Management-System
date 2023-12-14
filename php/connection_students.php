@@ -1,7 +1,6 @@
 <?php
 include 'server_config.php';
 
-$studentid = $_POST['studentid'];
 $rollnumber = $_POST['rollnumber'];
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
@@ -12,7 +11,7 @@ $major = $_POST['major'];
 $bloodgroup = $_POST['bloodgroup'];
 $regdate = $_POST['regdate'];
 
-$sql = "INSERT INTO students (studentid, rollnumber, firstname, lastname, gender, emailaddress, dob, major, bloodgroup, regdate) VALUES ('$studentid', '$rollnumber', '$firstname', '$lastname', '$gender', '$emailaddress', '$dob', '$major', '$bloodgroup', '$regdate')";
+$sql = "INSERT INTO students (rollnumber, firstname, lastname, gender, emailaddress, dob, major, bloodgroup, regdate) VALUES ('$rollnumber', '$firstname', '$lastname', '$gender', '$emailaddress', '$dob', '$major', '$bloodgroup', '$regdate')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Data inserted succefully.";
