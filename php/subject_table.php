@@ -22,7 +22,7 @@ if ($result->num_rows > 0)
 <html>
     <head>
         <title>Subjects</title>
-        <link rel="stylesheet" href="table_designCSS.css">
+        <link rel="stylesheet" href="..\css\table_designCSS.css">
     </head>
     <body>
         <div style="max-width: 600px;" class="container">
