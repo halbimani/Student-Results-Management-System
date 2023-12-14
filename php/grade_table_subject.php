@@ -20,10 +20,10 @@ if(isset($_GET['subjectid']) && !empty($_GET['subjectid'])) {
         <title>Subject Grade</title>
         <link rel="stylesheet" href="table_designCSS.css">
     </head>
-    <body style="background-color: gray;">
-        <div class="box">
+    <body>
+        <div style="max-width: 800px;" class="container">
             <?php $title = $once->fetch_assoc() ?>
-            <h2 style="color: white;"><?php echo $title['subjectname'] ?>'s Grades</h2>
+            <h2><?php echo $title['subjectname'] ?>'s Grades</h2>
             <table>
                 <thead>
                     <tr>
