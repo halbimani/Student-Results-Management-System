@@ -21,7 +21,7 @@ if (isset($_GET['studentid']) && !empty($_GET['studentid'])) {
 <html>
     <head>
         <title>Student Grade</title>
-        <link rel="stylesheet" href="table_designCSS.css">
+        <link rel="stylesheet" href="..\css\table_designCSS.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
     </head>
     <body>
